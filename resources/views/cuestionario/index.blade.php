@@ -1,6 +1,8 @@
 {{-- @extends('layouts.app') --}}
 @extends('adminlte::page')
 
+@section('title', 'Cuestionarios')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -11,7 +13,7 @@
                 @foreach ($cuestionarios as $cuestionario)
                     <li class="list-group-item">{{ $cuestionario->titulo }}
                         
-                        <a class="btn btn-dark float-end" href="/cuestionarios/{{ $cuestionario->id }}/edit">Modificar Cuestionario</a>
+                        <a class="btn btn-dark float-end" href="/cuestionarios/{{ $cuestionario->id }}/">Modificar Cuestionario</a>
                     
                     </li>   
                     

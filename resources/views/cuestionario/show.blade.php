@@ -1,4 +1,5 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
+@extends('adminlte::page')
 
 @section('content')
 <div class="container">
@@ -11,7 +12,7 @@
 
                 <div class="card-body">
                    <a class="btn btn-dark" href="/cuestionarios/{{ $cuestionario->id }}/preguntas/create">Agregar pregunta</a>
-                   <a class="btn btn-danger" href="/cuestionarios/{{ $cuestionario->id }}/preguntas/create">Modificar cuestionario</a>
+                   <a class="btn btn-danger" href="/cuestionarios/{{ $cuestionario->id }}/edit">Modificar cuestionario</a>
                    <a class="btn btn-danger" href="/cuestionarios/{{ $cuestionario->id }}/preguntas/create">Eliminar cuestionario</a>
                     
                 </div>

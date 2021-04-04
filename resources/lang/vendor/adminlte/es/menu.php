@@ -2,6 +2,8 @@
 
 return [
 
+    'search'                        => 'buscar',
+    'Questionaries'                 => 'Cuestionarios',
     'main_navigation'               => 'MENU PRINCIPAL',
     'blog'                          => 'Blog',
     'pages'                         => 'Páginas',
