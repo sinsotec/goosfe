@@ -18,7 +18,7 @@ class CreateRespuestasTable extends Migration
             $table->unsignedBigInteger('pregunta_id');
             $table->string('respuesta');
             $table->unsignedInteger('puntaje');
-            $table->unsignedInteger('idioma_id');
+            $table->unsignedInteger('idioma_id')->default('es');
             $table->timestamps();
         });
     }

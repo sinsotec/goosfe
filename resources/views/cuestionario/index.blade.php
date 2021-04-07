@@ -6,18 +6,20 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
-                <div class="card-header">Cuestionarios</div>
+                <div class="card-header">Cuestionarios <a class="float-right" href="/cuestionarios/create">Agregar Cuestionario</a></div>
+                
                 <ul class="list-group list-group-flush">
-                @foreach ($cuestionarios as $cuestionario)
+                @forelse ($cuestionarios as $cuestionario)
                     <li class="list-group-item">{{ $cuestionario->titulo }}
                         
-                        <a class="btn btn-dark float-end" href="/cuestionarios/{{ $cuestionario->id }}/">Modificar Cuestionario</a>
+                        <a class="btn btn-primary float-right" href="/cuestionarios/{{ $cuestionario->id }}/">Modificar Cuestionario</a>
                     
                     </li>   
-                    
-                @endforeach
+                @empty
+                <li class="list-group-item">No hay cuestionarios</li>        
+                @endforelse
                 </ul>
             </div>           
         </div>

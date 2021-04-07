@@ -51,4 +51,24 @@ class CuestionarioController extends Controller
         return view('cuestionario.show', compact('cuestionario'));
     }
 
+    public function update(Cuestionario $cuestionario)
+    {
+        $data = request()->validate([
+            'titulo' => 'required',
+            'descripcion' => 'required',
+        ]);
+
+        $cuestionario->update($data);
+    
+        return redirect('/cuestionarios/'.$cuestionario->id);
+    }
+
+    public function destroy(Cuestionario $cuestionario)
+    {
+
+        $cuestionario->delete();
+
+        return redirect('/cuestionarios');
+    }
+
 }

@@ -1,15 +1,18 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('content')')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <a href="/cuestionarios/{{ $cuestionario->id }}" class="btn">< back</a>
             <div class="card">
                 <div class="card-header">{{ __('Editar cuestionario') }}</div>
 
                 <div class="card-body">
-                   <form action="/cuestionarios/" method="POST">
-                    
+                   <form action="/cuestionarios/{{ $cuestionario->id }}" method="POST">
+                        @method('PATCH')
                         @csrf
 
                         <div class="form-group">
