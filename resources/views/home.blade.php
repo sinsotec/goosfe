@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <a href="/cuestionarios/create" class="btn btn-dark">Crear nuevo cuestionario</a>
+                    <a href="/cuestionarios/create" class="btn btn-primary">Crear nuevo cuestionario</a>
                 </div>
             </div>
         </div>
